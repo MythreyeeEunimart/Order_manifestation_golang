@@ -9,6 +9,8 @@ import (
 func main(){
 		app := fiber.New()
 		config.Connectdb()
-		routes.UserRoutes(app)
+		routes.RoutesRegistry(app)
 		app.Listen(":3000")
 }
+
+

@@ -30,6 +30,11 @@ func AppError(c *fiber.Ctx, data map[string]string) (error){
     errMsg["FAILED_TO_CREATE_MANIFESTATION"]["errorCode"] = "VDI_SLSA_ORDERS_0015"
     errMsg["FAILED_TO_CREATE_MANIFESTATION"]["description"] = "Can't create manifestation for this order."
 
+	errMsg["FAILED_TO_UPDATE_ORDER"] = map[string]string{}
+    errMsg["FAILED_TO_UPDATE_ORDER"]["errorCode"] = "VDI_SLSA_ORDERS_0002"
+    errMsg["FAILED_TO_UPDATE_ORDER"]["description"] = "DB error or document might not exist to perform update operation"
+
+
 
 
 	var errorSchema models.ErrorMsg
